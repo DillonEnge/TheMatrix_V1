@@ -1,4 +1,4 @@
-package com.cypher.thematrix;
+package com.dillonenge.thematrix_v1;
 
 import java.util.Random;
 
@@ -16,6 +16,8 @@ public class Human {
     Random rdm;
     RandomMethods rdmMethods;
     public void giveBirth(){
+        rdm = new Random();
+        rdmMethods = new RandomMethods();
         height = rdm.nextInt((21 - 17) + 1) + 17;
         weight = rdm.nextInt((8-6) + 1) + 6;
         race = rdmMethods.generateRace();

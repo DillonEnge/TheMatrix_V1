@@ -1,4 +1,4 @@
-package com.cypher.thematrix;
+package com.dillonenge.thematrix_v1;
 
 import java.util.Random;
 
@@ -8,6 +8,7 @@ import java.util.Random;
 public class RandomMethods {
     Random rdm;
     public String generateRace(){
+        rdm = new Random();
         String race;
         int raceInt = rdm.nextInt((3 - 1) + 1) + 1;
         switch (raceInt) {
@@ -24,6 +25,7 @@ public class RandomMethods {
     }
 
     public String generateGender(){
+        rdm = new Random();
         String gender;
         int raceInt = rdm.nextInt((2 - 1) + 1) + 1;
         switch (raceInt) {
@@ -38,6 +40,7 @@ public class RandomMethods {
     }
 
     public String generateBodyType(){
+        rdm = new Random();
         String bodyType;
         int bodyTypeInt = rdm.nextInt((5 - 1) + 1) + 1;
         switch (bodyTypeInt) {
