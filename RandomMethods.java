@@ -1,4 +1,9 @@
-package com.dillonenge.thematrix_v1;
+package com.cypher.thematrix;
+
+import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -8,7 +13,6 @@ import java.util.Random;
 public class RandomMethods {
     Random rdm;
     public String generateRace(){
-        rdm = new Random();
         String race;
         int raceInt = rdm.nextInt((3 - 1) + 1) + 1;
         switch (raceInt) {
@@ -25,7 +29,6 @@ public class RandomMethods {
     }
 
     public String generateGender(){
-        rdm = new Random();
         String gender;
         int raceInt = rdm.nextInt((2 - 1) + 1) + 1;
         switch (raceInt) {
@@ -40,7 +43,6 @@ public class RandomMethods {
     }
 
     public String generateBodyType(){
-        rdm = new Random();
         String bodyType;
         int bodyTypeInt = rdm.nextInt((5 - 1) + 1) + 1;
         switch (bodyTypeInt) {
@@ -59,4 +61,26 @@ public class RandomMethods {
         }
         return bodyType;
     }
+
+    public void checkConditions(Human human, String condition){
+        if(condition == "age") {
+            if (human.age == 1) human.lifeStage = "Toddler";
+            if (human.age >= 2) human.lifeStage = "Infant";
+            if (human.age >= 5) human.lifeStage = "Schoolchild";
+            if (human.age >= 11) human.lifeStage = "Adolescent";
+            if (human.age >= 20) human.lifeStage = "Young adult";
+            if (human.age >= 30) human.lifeStage = "Mature adult";
+            if (human.age >= 60) human.lifeStage = "Ageing adult";
+        }
+        if(condition == "weight"){
+            if(human.age > 24)human.weight++;
+        }
+
+    }
+
+    public double getGaussian(double aMean, double aVariance){
+        Random random = new Random();
+        return aMean + random.nextGaussian() * aVariance;
+    }
+
 }

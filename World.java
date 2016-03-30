@@ -1,14 +1,16 @@
-package com.dillonenge.thematrix_v1;
+package com.cypher.thematrix;
 
 /**
  * Created by Alienware on 3/21/2016.
  */
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
-public class World {
+public class World extends AppCompatActivity {
     Human[] humans;
     public Human[] populateWorld(long humanPopulation){
-        humans = new Human[(int)humanPopulation];
+
         for(int i = 0; i<humanPopulation; i++){
             humans[i] = new Human();
         }
@@ -19,6 +21,11 @@ public class World {
     }
 
     public void beginTime(int years){
-
+        RandomMethods rdmm = new RandomMethods();
+        for(int i = 0; i < years; i++);
+        for(Human human: humans){
+            human.age++;
+            rdmm.checkConditions(human);
+        }
     }
 }

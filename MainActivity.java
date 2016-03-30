@@ -1,4 +1,4 @@
-package com.dillonenge.thematrix_v1;
+package com.cypher.thematrix;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int years;
-    int population = 1000;
-    Human[] humans;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +23,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void test(View v){
         World matrix = new World();
-        humans = new Human[population];
-        humans = matrix.populateWorld(population);
+        Human[] humans = matrix.populateWorld(1000);
         TextView population = (TextView) findViewById(R.id.textView);
         population.setText(humans.length + " People");
+    }
+    public void updatePopulation(String output){
+        TextView text = (TextView) findViewById(R.id.textView);
+        text.setText(output);
     }
 }

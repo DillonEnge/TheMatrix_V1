@@ -1,4 +1,4 @@
-package com.dillonenge.thematrix_v1;
+package com.cypher.thematrix;
 
 /**
  * Created by Alienware on 3/21/2016.
