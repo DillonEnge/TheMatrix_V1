@@ -12,6 +12,11 @@ public class OtherMethods {
     static Random rdm = new Random();
     static DecimalFormat dF1 = new DecimalFormat("0.0");
     static DecimalFormat dF3 = new DecimalFormat("0.000");
+
+    /**
+     * Generates a random human name first and last from a list of names
+     * @return Full name
+     */
     public static String createHumanName(){
         File names = new File("Names.txt");
         String firstName = parseRandom(names);
@@ -19,12 +24,21 @@ public class OtherMethods {
         return firstName + " " + lastName;
     }
 
+    /**
+     * Generates a random city name from a list of nouns
+     * @return City name
+     */
     public static String createCityName(){
         File nouns = new File("Nouns.txt");
         String cityName = parseRandom(nouns);
         return cityName;
     }
 
+    /**
+     * Parses the passed in file to find a random word
+     * @param f File to parse
+     * @return Random word
+     */
     private static String parseRandom(File f){
         try {
             Scanner s = new Scanner(f);

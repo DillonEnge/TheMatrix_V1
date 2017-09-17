@@ -10,6 +10,11 @@ public class City {
     int populationLimit;
     String name;
     ArrayList<Human> humans;
+
+    /**
+     * Populates the city with a number of randomly generated humans.
+     * @param numberOfHumans Number of humans
+     */
     public void populate(double numberOfHumans){
         humans = new ArrayList<>((int)numberOfHumans);
         long initialTime = System.nanoTime();
@@ -32,6 +37,11 @@ public class City {
         int timeElapsed = (int)((finalTime - initialTime)/1000000000);
         System.out.println("Process took " + timeElapsed + " seconds to complete.");
     }
+
+    /**
+     * Constructor for City
+     * @param populationLimit Population limit
+     */
     public City(int populationLimit){
         this.populationLimit = populationLimit;
         name = OtherMethods.createCityName();
@@ -40,7 +50,7 @@ public class City {
 
     @Override
     public String toString(){
-        return "City " + name + " has population " + population + " people and has capacity for " + populationLimit + " people.";
+        return "*\nCity " + name + " has population " + population + " people and has capacity for " + populationLimit + " people.\n*";
     }
 
 }

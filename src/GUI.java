@@ -1,6 +1,7 @@
 import javax.swing.*;
 
 /**
+ * Creates a jswing gui for inputting the parameters for world generation
  * Created by dillonenge on 3/3/17.
  */
 public class GUI {

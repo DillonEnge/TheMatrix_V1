@@ -17,6 +17,9 @@ public class Human {
     boolean isKind = false;
     static int totalDead;
 
+    /**
+     * Constructor for a human that randomly generates all of their attributes
+     */
     public Human() {
         age = OtherMethods.rdm.nextInt((95 - 18) + 1) + 18;
         if (age > 30) {
@@ -45,6 +48,9 @@ public class Human {
         }
     }
 
+    /**
+     * Kills a human
+     */
     public void die() {
         age = 0;
         weight = 0;
@@ -56,9 +62,13 @@ public class Human {
         totalDead++;
     }
 
+    /**
+     * Checks against a persons mortality percentage if they die of natural causes
+     * @return boolean
+     */
     public boolean checkIfDies() {
         int check = (int) (100 * mortalityPercentage);
-        if ((OtherMethods.rdm.nextInt(99) + 1) == check) {
+        if ((OtherMethods.rdm.nextInt(99) + 1) == check) { //Check for accuracy
             this.die();
             return true;
         } else {
