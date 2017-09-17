@@ -10,7 +10,9 @@ public class Methods {
         mainWorld = new World();
         mainWorld.initialize(numberOfCities, populationMax, populationMin);
         for(City city: mainWorld.cities){
-            System.out.println(city.population);
+            for(Human h: city.humans){
+                System.out.println(h.toString());
+            }
         }
     }
 }
