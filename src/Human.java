@@ -68,7 +68,7 @@ public class Human {
 
     @Override
     public String toString() {
-        String partnerName = (partner.name.equals(null)) ? "nobody" : partner.name;
+        //String partnerName = (partner.name.equals(null)) ? "nobody" : partner.name;
         return name + " is " + age + " years old weighing " + OtherMethods.dF1.format(weight)
                 + " measuring " + OtherMethods.dF1.format(height) + " feet with an iQ of " + iQ + " with a mortality rate of " + mortalityPercentage + "%";
     }
