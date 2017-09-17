@@ -7,8 +7,15 @@ import java.util.Random;
 public class World {
     int population;
     double waterToLandRatio;
-
     static ArrayList<City> cities;
+
+    /**
+     * Initializes a world with the passed in number of city's, the max population across the world,
+     * and the min population across the world
+     * @param numberOfCities Number of cities
+     * @param populationMax Maximum population
+     * @param populationMin Minimum Population
+     */
     public static void initialize(int numberOfCities, int populationMax, int populationMin){
         cities = new ArrayList<>(numberOfCities);
         int upperBound = populationMax/numberOfCities;
