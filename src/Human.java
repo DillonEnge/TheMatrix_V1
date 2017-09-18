@@ -11,7 +11,7 @@ public class Human {
     double height;
     double mortalityPercentage = .05;
     String name = "";
-    Human partner;
+    //Human partner;
     static int total;
     boolean isAlive = true;
     boolean isKind = false;

@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class OtherMethods {
     static Random rdm = new Random();
     static DecimalFormat dF1 = new DecimalFormat("0.0");
-    static DecimalFormat dF3 = new DecimalFormat("0.000");
+    //static DecimalFormat dF3 = new DecimalFormat("0.000");
 
     /**
      * Generates a random human name first and last from a list of names
